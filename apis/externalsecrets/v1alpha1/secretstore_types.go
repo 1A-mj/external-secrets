@@ -22,9 +22,10 @@ import (
 type StoreProvider string
 
 const (
-	AWSSM StoreProvider = "AWSSM"
-	GCPSM StoreProvider = "GCPSM"
-	Vault StoreProvider = "VAULT"
+	AWSSM   StoreProvider = "AWSSM"
+	GCPSM   StoreProvider = "GCPSM"
+	Vault   StoreProvider = "VAULT"
+	AzureKV StoreProvider = "AZUREKV"
 )
 
 // SecretStoreSpec defines the desired state of SecretStore.
@@ -44,7 +45,8 @@ type SecretStoreSpec struct {
 type SecretStoreProvider struct {
 	// AWSSM configures this store to sync secrets using AWS Secret Manager provider
 	// +optional
-	AWSSM *AWSSMProvider `json:"awssm,omitempty"`
+	AWSSM   *AWSSMProvider   `json:"awssm,omitempty"`
+	AzureKV *AzureKVProvider `json:"azurekv,omitempty"`
 }
 
 type SecretStoreStatusPhase string

@@ -1,7 +1,7 @@
 # External Secrets
 
 The External Secrets Kubernetes operator reads information from a third party service
-like [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) and automatically injects the values as [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+like [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) or [Azure Keyvault](https://azure.microsoft.com/en-us/services/key-vault/)and automatically injects the values as [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 Multiple people and organizations are joining efforts to create a single External Secrets solution based on existing projects. If you are curious about the origins of this project, check out this [issue](https://github.com/external-secrets/kubernetes-external-secrets/issues/47) and this [PR](https://github.com/external-secrets/kubernetes-external-secrets/pull/477).
 
